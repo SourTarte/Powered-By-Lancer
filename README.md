@@ -1,1 +1,1 @@
-# Powered-By-Lancer
+A theme based heavily off of the aesthetics of the Lancer TTRPG, and Santi Younger's Wasp theme.

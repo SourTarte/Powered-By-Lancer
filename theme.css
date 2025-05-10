@@ -1,0 +1,599 @@
+/* Heavily Based on the Theme "Wasp" and Obsidian Theme created by Santi Younger */
+/*
+    Copyright (c) 2009, Mark Simonson (http://www.ms-studio.com, mark@marksimonson.com), with Reserved Font Name Anonymous Pro. This Font Software is licensed under the SIL Open Font License, Version 1.1 . This license is copied below, and is also available with a FAQ at: https://openfontlicense.org 
+    Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ 
+*/
+
+@import url("fonts.css");
+
+:root{
+    --font-text-normal: "Arimo", sans-serif;
+    --font-code-blocks: "Anonymous-Pro-Regular", monospace;
+    --font-text-headers: 'Helvetica';
+}
+
+.theme-dark
+      {
+      --button-hover-bg-color: #a271c0; /* Darker Yellow Background for Hover */
+      --button-hover-text-color: #d8d8d8; /* White Text for Hover */
+      --button-bg-color: #915cb2; /* Gray-Black Background */
+      --button-text-color: #d8d8d8; /* Light Gray Text */   
+      --background-primary:         #2b2b2b;
+      --background-primary-alt:     #373737;
+      --background-secondary:       #126127;
+      --background-secondary-alt:   #134d22;
+      
+      --text-normal:                #e7e7e7;
+      --text-faint:                 #b6ceb2;
+      --text-title-h1:              #e7e7e7;
+      --text-title-h2:              #e7e7e7;
+      --text-title-h3:              #e7e7e7;
+      --text-title-h4:              #e7e7e7;
+      --text-title-h5:              #d8d8d8;
+      --text-title-h6:              #c7e7c7;
+      --text-h1-background:         #36ad26;
+      --text-h2-background:         #269e16;
+      --text-h3-background:         #221e1f;
+      --text-h4-background:         #8848b1;
+      --text-h5-background:         #bc4545;
+      --text-highlight-bg:          #9400a1;
+      --text-link:                  #83a598; 
+      --text-a-hover:               #83a598; 
+      --text-accent-hover:          #da9fff;
+
+      --titlebar-text-color-focused: #ffffff;
+      --titlebar-text-color:         #ffffff;
+      --status-bar-text-color:       #ffffff;
+/* ^^^ added for hover over bracket internal links */
+      --icon-color:                 #9aff9f;
+      --icon-color-focused:         #dba0ff;
+      --icon-color-hover:           #e3b7ff;
+
+      
+ /* ^^^ added for hover over bracket internal links */
+      --inline-code:                #83a598; 
+      --code-background:            #333333;
+      --code-block:                 #83a598;
+      --code-size:                  var(--font-medium); 
+      --text-a:                     #c76cff; 
+      --interactive-accent:         #c76cff;
+      --text-accent:                #c76cff; 
+      --text-on-accent:             #fff;
+      --interactive-accent-rgb:     #c76cff; 
+      --vim-cursor:                 #c76cff; 
+      /*  --text-mark:                  add text-mark if needed, this should work together with 'mark' */
+      --pre-code:                   #;
+      --interactive-before:         #7c6f64;
+      --background-modifier-border: #009200;
+      --text-selection:             #915cb2;
+
+      --nav-item-color-active:      #d8d8d8;
+      --nav-item-color-hover:       #ffeeee;
+      --nav-item-color-selected:    #eba2a2;
+         
+      --font-monospace: var(--font-code-blocks);
+      --font-interface: var(--font-text-normal);
+      --font-text: var(--font-text-normal);
+
+      --font-headers: var(--font-text-headers);
+      --inline-title-font: var(--font-text-headers);
+    
+      --tab-font-weight: bold;
+      --nav-item-weight: bold;
+      }
+
+.theme-dark .cm-s-obsidian span.obsidian-search-match-highlight 
+{
+    color: var(--text-normal);
+    background-color: #3b2c1f;
+}
+
+.theme-dark .workspace-leaf.mod-active .clickable-icon
+{
+    color:#d38dff;
+    opacity: 1;
+}
+
+.theme-dark .tree-item-self
+{
+    --text-normal:rgb(255, 255, 255);
+}
+
+.theme-dark .workspace-tab-header-inner-icon
+{
+    --tab-text-color-focused-active-current:         #ffffff;
+}
+.theme-dark .workspace-tab-header
+{
+    color: #81e774;
+    font-family: var(--font-code-blocks);
+}
+
+.theme-dark .menu-item-title
+{
+    color:#ffffff;
+}
+.theme-dark .menu-item-icon
+{
+    color:var(--icon-color)
+}
+
+.theme-light
+     {
+        
+         --background-primary:         #e7e7e7;
+         --background-secondary:       #991e2a;
+          /* thick menu border */
+         --background-primary-alt:     #707070;
+         --background-secondary-alt:   #991e2a; /* ← ↓  corner */
+         --text-normal:                #000000;
+         --text-faint:                 #ff8585;
+         --text-title-h1:              #e7e7e7;
+         --text-title-h2:              #e7e7e7;
+         --text-title-h3:              #e7e7e7;
+         --text-title-h4:              #e7e7e7;
+         --text-title-h5:              #e7e7e7;
+         --text-title-h6:              #640a0d;
+         --text-h1-background:         #C21F25;
+         --text-h2-background:         #e93538;
+         --text-h3-background:         #221e1f;
+         --text-h4-background:         #87007f;
+         --text-h5-background:         #67bc45;
+         --text-link:                  #424448;
+         --text-a-hover:               #8a8e96;
+         --text-accent-hover:          #8e929b;
+        
+         --titlebar-text-color-focused: #ffffff;
+         --titlebar-text-color:         #ffffff;
+         --status-bar-text-color:       #ffffff;
+/* ^^^ added for hover over bracket internal links */
+         --inline-code:                #458588;
+         --code-background:            #ebd9d9;
+         --code-size:                  var(--font-medium); 
+
+         --icon-color:                 #bebebe;
+         --icon-color-focused:         #d8d8d8;
+         --icon-color-hover:           #ffffff;
+
+         /*  --text-mark:                  add if needed */
+         --pre-code:                   #bebebe;
+         --text-highlight-bg:          #5ea9ff;
+         --interactive-before:         #a89984;
+         --background-modifier-border: #af303d;
+         --text-a:                     #ff3e3e;
+         --interactive-accent:         #ff3e3e;
+         --text-accent:                #ff3e3e;
+         --interactive-accent-rgb:     #ff3e3e;
+         --vim-cursor:                 #ff3e3e;
+         --text-selection:             #8fc3ff;
+         --text-white:                 #ffffff;
+         --nav-item-color-active:      #ffffff;
+         --nav-item-color-hover:       #ffeeee;
+         --nav-item-color-selected:    #eba2a2;
+
+         --font-monospace: var(--font-code-blocks);
+        --font-interface: var(--font-text-normal);
+        --font-text: var(--font-text-normal);
+
+        --font-headers: var(--font-text-headers);
+        --inline-title-font: var(--font-text-headers);
+      
+        --tab-font-weight: bold;
+        --nav-item-weight: bold;
+     }
+     
+.theme-light .workspace-leaf.mod-active .clickable-icon
+{
+    color:#8a8e96;
+    opacity: 1;
+}
+
+.theme-light .tree-item-self
+{
+    --text-normal:rgb(255, 255, 255);
+}
+
+.theme-light .workspace-tab-header-inner-icon
+{
+    --tab-text-color-focused-active-current:         #ffffff;
+    
+}
+.theme-light .workspace-tab-header
+{
+    color: #e77474;
+    font-family: var(--font-code-blocks);
+}
+
+.theme-light .menu-item-title, .theme-light .menu-item-icon
+{
+    color:#e6e6e6;
+}
+
+.nav-file-title, .nav-folder-title {
+    color: white;
+}
+.workspace-drawer-vault-name
+{
+    color:rgb(231, 231, 231);
+}
+
+
+
+
+.nav-file-title.is-active, .nav-folder-title.is-active, body:not(.is-grabbing) .nav-file-title:hover, body:not(.is-grabbing) .nav-folder-title:hover 
+{
+    background-color: var(--background-modifier-border);
+    color: white;
+}
+
+.cm-s-obsidian span.cm-formatting-link {
+    color: var(--text-normal);
+}
+
+.CodeMirror-guttermarker-subtle {
+    color: var(--text-normal) !important;
+    
+}
+
+button.mod-cta {
+    background-color: var(--interactive-accent);
+    color: var(--text-normal);
+    
+}
+
+.vertical-tab-header-group
+{
+    color: var(--text-white);
+}
+
+.inline-title
+{
+    text-transform:uppercase;
+}
+
+.cm-header-1 {
+    font-size: 18px;
+    color: var(--text-title-h1) !important;
+    font-family:var(--font-headers);
+    text-transform: uppercase;
+    background-color: var(--text-h1-background);
+    
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding: .24em .3em .25em;
+    margin-bottom: .35em;
+    
+    &:after {
+		position: absolute;
+		z-index: -2;
+		content: "";
+		right: -20%;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: inherit;
+		-webkit-transform: skewX(-30deg);
+		-moz-transform: skewX(-30deg);
+		-ms-transform: skewX(-30deg);
+		transform: skewX(-30deg);
+	}
+    
+
+    
+}
+/*.cm-header-1 {
+font-size: 18px;
+color: var(--text-title-h1) !important;
+font-family:var(--font-headers);
+text-transform: uppercase;
+background-color: var(--text-h1-background);
+border-left: 20px solid var(--text-h1-background);
+border-right: 20px solid var(--text-h1-background);
+border-radius: 0px 10px 0px 10px;
+}*/
+
+.cm-header-2 {
+font-size: 18px;
+color: var(--text-title-h2) !important;
+font-family:var(--font-headers);
+background-color: var(--text-h2-background);
+    
+position: relative;
+display: inline-block;
+color: white;
+padding: .24em .3em .25em;
+margin-bottom: .35em;
+
+&:after {
+    position: absolute;
+    z-index: -2;
+    content: "";
+    right: -20%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+    -webkit-transform: skewX(-30deg);
+    -moz-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+}
+}
+
+.cm-header-3 {
+font-size: 18px;
+color: var(--text-title-h3) !important;
+font-family:var(--font-headers);
+background-color: var(--text-h3-background);
+    
+position: relative;
+display: inline-block;
+padding: .24em .3em .25em;
+margin-bottom: .35em;
+
+&:after {
+    position: absolute;
+    z-index: -2;
+    content: "";
+    right: -20%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+    -webkit-transform: skewX(-30deg);
+    -moz-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+}
+}
+
+.cm-header-4 {
+font-size: 18px;
+color: var(--text-title-h4) !important;
+background: var(--text-h4-background);
+font-family:var(--font-headers);
+padding: .1em .2em .1em;
+position: relative;
+display: inline-block;
+margin-bottom: .35em;
+
+&:after {
+    position: absolute;
+    z-index: -2;
+    content: "";
+    right: -20%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+    -webkit-transform: skewX(-30deg);
+    -moz-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+}
+}
+
+.cm-header-5 {
+font-size: 18px;
+color: var(--text-title-h5) !important;
+background: var(--text-h5-background);
+font-family:var(--font-headers);
+padding: .1em .2em .1em;
+position: relative;
+display: inline-block;
+margin-bottom: .35em;
+
+&:after {
+    position: absolute;
+    z-index: -2;
+    content: "";
+    right: -20%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+    -webkit-transform: skewX(-30deg);
+    -moz-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+}
+}
+
+.cm-header-6 {
+font-size: 18px;
+color: var(--text-title-h6) !important;
+font-family:var(--font-headers);
+margin-bottom: .35em;
+}
+
+.markdown-preview-view h1 {
+font-size: 20px;
+line-height: 24px;
+color: var(--text-title-h1) !important;
+font-family:var(--font-headers);
+}
+
+.markdown-preview-view h2 {
+font-size: 20px;
+line-height: 24px;
+color: var(--text-title-h2) !important;
+font-family:var(--font-headers);
+}
+
+.markdown-preview-view h3 {
+font-size: 20px;
+line-height: 24px;
+color: var(--text-title-h3) !important;
+font-family:var(--font-headers);
+}
+
+.markdown-preview-view h4 {
+font-size: 20px;
+line-height: 24px;
+color: var(--text-title-h4) !important;
+font-family:var(--font-headers);
+}
+
+.markdown-preview-view h5 {
+font-size: 20px;
+line-height: 24px;
+color: var(--text-title-h5) !important;
+font-family:var(--font-headers);
+}
+
+.markdown-preview-view h6 {
+font-size: 20px;
+line-height: 24px;
+color: --text-normal;
+color: var(--text-title-h6) !important;
+font-family:var(--font-headers);
+}
+
+
+
+/*-----------------------------------------*/
+/* End of main theme, extra functionality can be added below */
+
+.markdown-source-view { font-family: var(--font-monospace)
+}
+
+.cm-fat-cursor .CodeMirror-cursor {
+background-color: #4974bf !important;
+opacity: 80% !important;
+width: 9px !important; 
+visibility: visible !important
+}
+
+.plugin-tabs .stayopen .view-header {
+border-bottom: 2px solid var(--interactive-accent)!important;
+}
+
+.plugin-tabs .mod-root.workspace-split.mod-vertical div.workspace-leaf:not(.stayopen) > .workspace-leaf-content > .view-header .view-header-title::before{
+background-color:transparent!important
+}
+
+.plugin-tabs .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen),
+.plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen){
+border-radius: 5px 5px 0px 0px!important;
+}
+
+.plugin-tabs .mod-root.workspace-split.mod-vertical div.workspace-leaf{
+border-color: var(--background-secondary-alt)!important;
+border-bottom-width: 0px!important;
+border-right-width: 0px!important
+}
+
+.theme-light.plugin-tabs  .mod-root.workspace-split.mod-vertical div.workspace-leaf{
+border-color: var(--background-secondary-alt)!important;
+border-left-width:3px!important;
+border-bottom-width: 0px!important;
+border-right-width: 0px!important
+}
+
+.plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf hr.workspace-leaf-resize-handle,
+.plugin-tabs .mod-root.workspace-split.mod-vertical > .mod-vertical hr.workspace-leaf-resize-handle{
+display: none;
+}
+
+
+.plugin-tabs .mod-root.workspace-split.mod-vertical div.workspace-leaf .view-header{
+border-left-color: transparent!important
+}
+
+.plugin-tabs .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content,
+.plugin-tabs .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content {
+    border-radius: 0px!important;
+}
+
+.plugin-tabs .theme-dark .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
+.plugin-tabs .theme-dark .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
+border: 0!important;
+border-radius: 0px 0px 0px 0px!important;
+}
+
+button.mod-cta {
+        background-color: var(--button-bg-color); /* Uses variable for background color */
+        color: var(--button-text-color); /* Uses variable for text color */
+        font-weight: 600; /* Makes text bold but less than standard bold */
+
+    }
+
+    button.mod-cta:hover, button.mod-cta:focus {
+        background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
+        color: var(--button-text-color); /* Keeps the default light gray text color on hover */
+        font-weight: 600; /* Makes text bold but less than standard bold */
+    }
+
+    .vertical-tab-nav-item.is-active {
+        background-color: var(--button-bg-color); /* Gray-Black Background */
+        color: var(--button-text-color); /* Light Gray Text */
+        font-weight: bold; /* Makes text bold */
+        font-weight: 600; /* Makes text bold but less than standard bold */
+    }
+
+    .vertical-tab-nav-item.is-active:hover, .vertical-tab-nav-item.is-active:focus {
+        background-color: white; /* Darker Yellow Background for Hover */
+        color: var(--button-text-color); /* Keeps the default light gray text color on hover */
+        font-weight: 600; /* Makes text bold but less than standard bold */
+    }
+
+    body:not(.is-phone) .vertical-tab-nav-item.is-active {
+      --background-modifier-hover: var(--button-hover-bg-color); /* More specific variable for hover */
+      --icon-color: var(--button-text-color);
+      background-color: var(--button-bg-color);
+      color: var(--button-text-color);
+        font-weight: 600; /* Makes text bold but less than standard bold */
+    }
+
+    body:not(.is-phone) .vertical-tab-nav-item.is-active:hover,
+    body:not(.is-phone) .vertical-tab-nav-item.is-active:focus {
+      background-color: var(--button-hover-bg-color);
+      color: var(--button-text-color);
+        font-weight: 600; /* Makes text bold but less than standard bold */
+    }
+    .checkbox-container.is-enabled {
+      background-color: var(--button-bg-color); /* Gray-Black Background */
+      color: var(--button-text-color); /* Light Gray Text */
+  }
+
+  .checkbox-container.is-enabled:hover, .checkbox-container.is-enabled:focus {
+      background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
+      color: var(--button-text-color); /* Keeps the default light gray text color on hover */
+  }
+
+  .flair.mod-pop {
+    background-color: var(--button-bg-color); /* Gray-Black Background */
+    color: var(--button-text-color); /* Light Gray Text */
+}
+
+.flair.mod-pop:hover, .flair.mod-pop:focus {
+    background-color: var(--button-hover-bg-color); /* Darker Yellow Background for Hover */
+    color: var(--button-text-color); /* Keeps the default light gray text color on hover */
+}
+
+/** hr styles -- PREVIEW MODE */
+.cm-line hr,
+.markdown-preview-view hr {
+  margin-block-start: 4em;
+  margin-block-end: 4em;
+  border: none;
+  height: 0;
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(to right, transparent, var(--text-accent), transparent);
+}
+
+.cm-line hr::after,
+.markdown-preview-view hr::after {
+  /* content: '\1f41d'; */
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  padding: 0.5rem;
+  color: var(--text-sub-accent);
+  background-color: var(--background-primary);
+}
