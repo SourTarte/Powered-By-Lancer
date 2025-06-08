@@ -93,6 +93,8 @@ body{
     --nav-item-color-hover:       #ffeeee;
     --nav-item-color-selected:    #eba2a2;
 
+    --dropdown-background-color: #c5c5c5;
+
     --font-monospace: var(--font-code-blocks);
     --font-interface: var(--font-text-normal);
     --font-text: var(--font-text-normal);
@@ -101,7 +103,95 @@ body{
     --inline-title-font: var(--font-text-headers);
 
     --tab-font-weight: bold;
-    --nav-item-weight: bold;
+    --nav-item-weight: normal;
+    --nav-item-weight-hover: bold;
+    --nav-item-weight-active: bold;
+    
+
+    .setting-item-control .dropdown
+    {
+        color: #ffe1e1;
+    }
+    
+
+    .workspace-drawer-active-tab-header
+    {
+        --nav-item-background-hover: var(--background-primary-alt);
+        
+        --background-modifier-form-field: var(--background-primary);
+
+        font-style: var(--font-text-headers);
+        font-weight: bold;
+    }
+    
+    .workspace-leaf.mod-active .clickable-icon
+    {
+        color:#8a8e96;
+        opacity: 1;
+    }
+
+    .workspace-tab-header-inner-icon
+    {
+        --tab-text-color-focused-active-current:         #ffffff;
+    }
+
+    .workspace-tab-header
+    {
+        font-family: var(--font-code-blocks);
+    }
+
+    .menu-item-title, .menu-item-icon
+    {
+        color:#e6e6e6;
+    }
+
+    .view-header-title-container
+    {
+        font-weight: bold;
+        --text-muted: #797979;
+    }
+
+    .workspace-drawer.mod-right
+    {
+        --nav-heading-color: white;
+    }
+}
+
+.theme-dark:is(.emulate-mobile)
+{
+    --interactive-accent: #dbdbdb;
+    --mobile-sidebar-background: var(--background-secondary);
+
+    .workspace-drawer.mod-right .tree-item-self
+    {
+        --nav-item-color: var(--nav-item-color-hover);
+        --nav-item-color-active:var(--nav-item-color-active);
+
+        font-family: var(--font-code-blocks);
+    }
+
+    .workspace-drawer-ribbon, .workspace-drawer-header
+    {
+        background: var(--background-secondary);
+        --text-normal: var(--text-title-h1);
+    }
+
+    .workspace-tab-header-container
+    {
+        --tab-container-background: var(--background-secondary-alt);
+    }
+}
+
+.theme-dark:not(.is-mobile)
+{
+    .workspace-tabs.mod-top-right-space
+    {
+        --nav-item-color: var(--nav-item-color-hover);
+        --nav-item-color-active:var(--nav-item-color-active);
+
+        font-family: var(--font-code-blocks);
+    }
+    
 }
 
 .theme-dark .cm-s-obsidian span.obsidian-search-match-highlight 
@@ -149,7 +239,8 @@ body{
     --background-primary-alt:     #707070;
     --background-secondary-alt:   #991e2a; /* ← ↓  corner */
     --text-normal:                #000000;
-    --text-faint:                 #ff8585;
+    --text-faint:                 #e46975;
+    --text-muted:                 #e46975;
     --text-title-h1:              #ffffff;
     --text-title-h2:              #ffffff;
     --text-title-h3:              #ffffff;
@@ -182,13 +273,18 @@ body{
     --pre-code:                   #bebebe;
     --text-highlight-bg:          #5ea9ff;
     --interactive-before:         #a89984;
+
+    --ribbon-background-collapsed: #721922;
+    
     --background-modifier-border: #af303d;
     --text-a:                     #ff3e3e;
     --interactive-accent:         #ff3e3e;
-    --text-accent:                #ff3e3e;
+    --text-accent:                #234bff; /* link text colour */
+    --link-external-color-hover:  #234bfff6;
+    --link-color-hover:           #234bfff6;
     --interactive-accent-rgb:     #ff3e3e;
     --vim-cursor:                 #ff3e3e;
-    --text-selection:             #8fc3ff;
+    --text-selection:             #ffa98f;
     --text-white:                 #ffffff;
     --nav-item-color-active:      #ffffff;
     --nav-item-color-hover:       #ffeeee;
@@ -203,33 +299,98 @@ body{
 
     --tab-font-weight: bold;
     --nav-item-weight: bold;
+    --nav-item-weight-hover: bold;
+    --nav-item-weight-active: bold;
+
+    .setting-item-control .dropdown
+    {
+        color: var(--text-faint);
+    }
+
+    .workspace-drawer-active-tab-header
+    {
+        --nav-item-background-hover: var(--background-primary-alt);
+        
+        --background-modifier-form-field: var(--background-primary);
+
+        font-style: var(--font-text-headers);
+        font-weight: bold;
+    }
+    
+    .workspace-leaf.mod-active .clickable-icon
+    {
+        color:#8a8e96;
+        opacity: 1;
+    }
+
+    .workspace-tab-header-inner-icon
+    {
+        --tab-text-color-focused-active-current:         #ffffff;
+    }
+
+    .workspace-tab-header
+    {
+        font-family: var(--font-code-blocks);
+    }
+
+    .menu-item-title, .menu-item-icon
+    {
+        color:#e6e6e6;
+    }
+
+    .view-header-title-container
+    {
+        font-weight: bold;
+        --text-muted: #797979;
+    }
+
+    .workspace-drawer.mod-right
+    {
+        --nav-heading-color: white;
+    }
+
+    
+    .setting-item-info
+    {
+        --text-normal: var(--text-h1-background);
+        --text-muted: black;
+    }
+
+    
+
+    
 }
 
-.theme-light .workspace-leaf.mod-active .clickable-icon
+.theme-light:is(.emulate-mobile)
 {
-    color:#8a8e96;
-    opacity: 1;
+    --interactive-accent: #dbdbdb;
+    --mobile-sidebar-background: var(--background-secondary);
+
+    .workspace-drawer.mod-right .tree-item-self
+    {
+        --nav-item-color: var(--nav-item-color-hover);
+        --nav-item-color-active:var(--nav-item-color-active);
+
+        font-family: var(--font-code-blocks);
+    }
+
+    .workspace-drawer-ribbon, .workspace-drawer-header
+    {
+        background: var(--background-secondary);
+        --text-normal: var(--text-title-h1);
+    }
 }
 
-.theme-light .tree-item-self
+.theme-light:not(.is-mobile)
 {
-    --text-normal:rgb(255, 255, 255);
-}
+    .workspace-tabs.mod-top-right-space
+    {
+        --nav-item-color: var(--nav-item-color-hover);
+        --nav-item-color-active:var(--nav-item-color-active);
 
-.theme-light .workspace-tab-header-inner-icon
-{
-    --tab-text-color-focused-active-current:         #ffffff;
-}
-
-.theme-light .workspace-tab-header
-{
-    color: #e77474;
-    font-family: var(--font-code-blocks);
-}
-
-.theme-light .menu-item-title, .theme-light .menu-item-icon
-{
-    color:#e6e6e6;
+        font-family: var(--font-code-blocks);
+    }
+    
 }
 
 .nav-file-title, .nav-folder-title {
