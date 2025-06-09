@@ -157,7 +157,7 @@ body{
     }
 }
 
-.theme-dark:is(.emulate-mobile)
+.theme-dark:is(.is-mobile)
 {
     --interactive-accent: #dbdbdb;
     --mobile-sidebar-background: var(--background-secondary);
@@ -361,7 +361,7 @@ body{
     
 }
 
-.theme-light:is(.emulate-mobile)
+.theme-light:is(.is-mobile)
 {
     --interactive-accent: #dbdbdb;
     --mobile-sidebar-background: var(--background-secondary);
