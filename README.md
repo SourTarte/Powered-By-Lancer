@@ -8,3 +8,6 @@ A theme for the Obsidian Markdown editor based heavily off of the aesthetics of 
 - Click “Use”
 - If given any options at this point, select "Overwrite"
 - Done!
+
+## Special Mention
+- Big thanks to Cloopy for taking my setting-analogous theme and turning it into something usable as a daily driver. Check out [Powered By Lancer - Retouched here.](https://github.com/Cloopy/Powered-by-Lancer---Retouched) 
